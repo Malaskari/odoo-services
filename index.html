@@ -40,11 +40,18 @@
   .hero .wrap{ position:relative; z-index:2; }
   .eyebrow{ font-size:.8rem; letter-spacing:3px; text-transform:uppercase; color:#bff3ec; font-weight:600; }
   .hero h1{ font-family:'Sora',sans-serif; font-size:3.1rem; font-weight:800; line-height:1.08; margin:14px 0 18px; letter-spacing:-1px; max-width:820px; }
-  .hero h1 .hl{ background:linear-gradient(90deg,#5fe6d5,#bff3ec); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .hero h1 .hl{ background:linear-gradient(90deg,#5fe6d5,#bff3ec); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; padding-right:.08em; }
   .hero p.lead{ font-size:1.12rem; color:#e2fbf6; max-width:640px; margin-bottom:30px; }
   .hero .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
   .hero .pills{ margin-top:34px; display:flex; gap:10px; flex-wrap:wrap; }
   .pill{ background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28); border-radius:22px; padding:6px 16px; font-size:.85rem; font-weight:500; }
+  .hero-inner{ display:flex; align-items:center; gap:48px; }
+  .hero-text{ flex:1; min-width:0; }
+  .hero-photo{ flex-shrink:0; }
+  .hero-photo img{ width:230px; height:230px; border-radius:50%; object-fit:cover; border:5px solid rgba(255,255,255,.35); box-shadow:0 18px 50px rgba(0,0,0,.28); }
+  .hero-photo .name-tag{ text-align:center; margin-top:14px; }
+  .hero-photo .name-tag .nm{ font-family:'Sora',sans-serif; font-weight:700; font-size:1.05rem; color:#fff; }
+  .hero-photo .name-tag .ti{ font-size:.82rem; color:#bff3ec; }
 
   /* STATS */
   .stats{ background:var(--bg); padding:44px 0; }
@@ -92,6 +99,9 @@
     .grid,.repos{ grid-template-columns:1fr 1fr; }
     .stats .wrap{ grid-template-columns:1fr 1fr; }
     .hero h1{ font-size:2.3rem; }
+    .hero-inner{ flex-direction:column-reverse; gap:28px; text-align:center; }
+    .hero .cta-row,.hero .pills{ justify-content:center; }
+    .hero-photo img{ width:170px; height:170px; }
     nav .links{ display:none; }
   }
   @media (max-width:560px){
@@ -118,18 +128,29 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">Odoo ERP Specialist · Remote Worldwide</div>
-    <h1 class="sora">Your <span class="hl">Odoo ERP</span>, deployed, customized &amp; integrated — done right.</h1>
-    <p class="lead">I'm Mohamed Alaskari, a full-stack Odoo developer with 7+ years running Odoo ERP in production for a multi-company group. From first go-live to advanced custom modules and integrations — I build ERP that actually fits how your business works.</p>
-    <div class="cta-row">
-      <a href="#contact" class="btn">Start your project →</a>
-      <a href="#work" class="btn btn-hero-ghost">See my work</a>
-    </div>
-    <div class="pills">
-      <span class="pill">Odoo 17 / 18 / 19</span>
-      <span class="pill">Custom Modules</span>
-      <span class="pill">Integrations &amp; AI</span>
-      <span class="pill">Arabic &amp; English</span>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="eyebrow">Odoo ERP Specialist · Remote Worldwide</div>
+        <h1 class="sora">Your <span class="hl">Odoo ERP</span>, deployed, customized &amp; integrated — done right.</h1>
+        <p class="lead">I'm Mohamed Alaskari, a full-stack Odoo developer with 7+ years running Odoo ERP in production for a multi-company group. From first go-live to advanced custom modules and integrations — I build ERP that actually fits how your business works.</p>
+        <div class="cta-row">
+          <a href="#contact" class="btn">Start your project →</a>
+          <a href="#work" class="btn btn-hero-ghost">See my work</a>
+        </div>
+        <div class="pills">
+          <span class="pill">Odoo 17 / 18 / 19</span>
+          <span class="pill">Custom Modules</span>
+          <span class="pill">Integrations &amp; AI</span>
+          <span class="pill">Arabic &amp; English</span>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="photo.png" alt="Mohamed Alaskari">
+        <div class="name-tag">
+          <div class="nm">Mohamed Alaskari</div>
+          <div class="ti">Odoo Developer · Tripoli, Libya</div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
